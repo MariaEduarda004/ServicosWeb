@@ -1,0 +1,189 @@
+openapi: 3.0.0
+info:
+  title: Swagger API Avaliações de Restaurantes
+  version: 1.0.0
+paths:
+  /restaurantes:
+    get:
+      summary: Listar todos os restaurantes
+      tags:
+        - Restaurante
+      responses:
+        '200':
+          description: Operação bem-sucedida
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Restaurante'
+        '500':
+          description: Erro interno do servidor
+    post:
+      summary: Criar um novo restaurante
+      tags:
+        - Restaurante
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Restaurante'
+      responses:
+        '201':
+          description: Restaurante criado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Restaurante'
+        '422':
+          description: Erro de validação
+        '400':
+          description: Erro ao criar restaurante
+
+  /restaurantes/{id}:
+    get:
+      summary: Obter um restaurante específico
+      tags:
+        - Restaurante
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Operação bem-sucedida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Restaurante'
+        '404':
+          description: Restaurante não encontrado
+        '500':
+          description: Erro interno do servidor
+
+    put:
+      summary: Atualizar um restaurante existente
+      tags:
+        - Restaurante
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Restaurante'
+      responses:
+        '200':
+          description: Restaurante atualizado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Restaurante'
+        '422':
+          description: Erro de validação
+        '404':
+          description: Restaurante não encontrado
+        '400':
+          description: Erro ao atualizar restaurante
+
+    delete:
+      summary: Excluir um restaurante
+      tags:
+        - Restaurante
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Restaurante excluído com sucesso
+        '404':
+          description: Restaurante não encontrado
+        '500':
+          description: Erro interno do servidor
+
+  /restaurantes/{id}/avaliacoes:
+    get:
+      summary: Listar todas as avaliações de um restaurante
+      tags:
+        - Restaurante
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Operação bem-sucedida
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Avaliacao'
+        '500':
+          description: Erro interno do servidor
+
+components:
+  schemas:
+    Restaurante:
+      type: object
+      properties:
+        id:
+          type: integer
+        nome:
+          type: string
+        endereco:
+          type: string
+        cidade:
+          type: string
+        cep:
+          type: string
+        telefone:
+          type: string
+        email:
+          type: string
+        tipo_cozinha:
+          type: string
+        descricao:
+          type: string
+      required:
+        - nome
+        - endereco
+        - cidade
+        - cep
+        - telefone
+        - email
+        - tipo_cozinha
+
+    Avaliacao:
+      type: object
+      properties:
+        id:
+          type: integer
+        restaurante_id:
+          type: integer
+        user_id:
+          type: integer
+        avaliacao:
+          type: number
+          format: float
+          minimum: 1
+          maximum: 5
+        comentario:
+          type: string
+      required:
+        - restaurante_id
+        - user_id
+        - avaliacao
