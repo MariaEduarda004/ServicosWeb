@@ -1,0 +1,839 @@
+{
+	"info": {
+		"_postman_id": "4299b41a-0197-4b17-bc71-632628f05c40",
+		"name": "Avaliacoes de restaurantes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27255684",
+		"_collection_link": "https://crimson-desert-446927.postman.co/workspace/API-de-Avalia%C3%A7%C3%A3o-de-Restaurante~8ec284c0-eeb3-4a4c-960b-edc7e14c7221/collection/27255684-4299b41a-0197-4b17-bc71-632628f05c40?action=share&source=collection_link&creator=27255684"
+	},
+	"item": [
+		{
+			"name": "/restaurantes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|pElArNhKjZb6MxcMRfOEHMqmSU3zsKOWuTUEjg458610f64c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/restaurantes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"restaurantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/restaurantes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Pizzaria Bella Napoli\",\r\n    \"endereco\": \"Rua das Pizzas, 789\",\r\n    \"cidade\": \"São Paulo\",\r\n    \"cep\": \"01234-567\",\r\n    \"telefone\": \"(11) 98765-4321\",\r\n    \"email\": \"contato@bellanapoli.com\",\r\n    \"tipo_cozinha\": \"Italiana\",\r\n    \"descricao\": \"Pizzaria tradicional com variedade de sabores e ingredientes frescos.\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/restaurantes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"restaurantes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/restaurantes",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Pizzaria Bella Napoli\",\r\n    \"endereco\": \"Rua das Pizzas, 789\",\r\n    \"cidade\": \"São Paulo\",\r\n    \"cep\": \"01234-567\",\r\n    \"telefone\": \"(11) 98765-4321\",\r\n    \"email\": \"contato@bellanapoli.com\",\r\n    \"tipo_cozinha\": \"Italiana\",\r\n    \"descricao\": \"Pizzaria tradicional com variedade de sabores e ingredientes frescos.\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/restaurantes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"restaurantes"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 Apr 2024 20:56:10 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 Apr 2024 20:56:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.10"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"nome\": \"Pizzaria Bella Napoli\",\n    \"endereco\": \"Rua das Pizzas, 789\",\n    \"cidade\": \"São Paulo\",\n    \"cep\": \"01234-567\",\n    \"telefone\": \"(11) 98765-4321\",\n    \"email\": \"contato@bellanapoli.com\",\n    \"tipo_cozinha\": \"Italiana\",\n    \"descricao\": \"Pizzaria tradicional com variedade de sabores e ingredientes frescos.\",\n    \"updated_at\": \"2024-04-29T20:56:10.000000Z\",\n    \"created_at\": \"2024-04-29T20:56:10.000000Z\",\n    \"id\": 17\n}"
+				}
+			]
+		},
+		{
+			"name": "/restaurantes/{restaurante}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|pElArNhKjZb6MxcMRfOEHMqmSU3zsKOWuTUEjg458610f64c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/restaurantes/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"restaurantes",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/restaurantes/1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/restaurantes/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"restaurantes",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 18:14:44 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 18:14:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"nome\": \"Sabor Carioca\",\n    \"endereco\": \"Av. das Palmeiras, 456\",\n    \"cidade\": \"Rio de Janeiro\",\n    \"cep\": \"20000-123\",\n    \"telefone\": \"(21) 98765-4321\",\n    \"email\": \"contato@saborcarioca.com\",\n    \"tipo_cozinha\": \"Carioca\",\n    \"descricao\": \"Restaurante oferecendo pratos típicos da culinária carioca.\",\n    \"created_at\": \"2024-04-29T17:32:27.000000Z\",\n    \"updated_at\": \"2024-04-29T17:32:27.000000Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "restaurantes/{restaurante}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|pElArNhKjZb6MxcMRfOEHMqmSU3zsKOWuTUEjg458610f64c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Restaurante Atualizado\",\r\n    \"endereco\": \"Rua Atualizada, 456\",\r\n    \"cidade\": \"Cidade Atualizada\",\r\n    \"cep\": \"87654-321\",\r\n    \"telefone\": \"(11) 8765-4321\",\r\n    \"email\": \"email@atualizado.com\",\r\n    \"tipo_cozinha\": \"Japonesa\",\r\n    \"descricao\": \"Um ótimo restaurante japonês.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/restaurantes/17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"restaurantes",
+						"17"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "restaurantes/17",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Restaurante Atualizado\",\r\n    \"endereco\": \"Rua Atualizada, 456\",\r\n    \"cidade\": \"Cidade Atualizada\",\r\n    \"cep\": \"87654-321\",\r\n    \"telefone\": \"(11) 8765-4321\",\r\n    \"email\": \"email@atualizado.com\",\r\n    \"tipo_cozinha\": \"Japonesa\",\r\n    \"descricao\": \"Um ótimo restaurante japonês.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/restaurantes/17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"restaurantes",
+								"17"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 18:20:32 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 18:20:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 17,\n    \"nome\": \"Restaurante Atualizado\",\n    \"endereco\": \"Rua Atualizada, 456\",\n    \"cidade\": \"Cidade Atualizada\",\n    \"cep\": \"87654-321\",\n    \"telefone\": \"(11) 8765-4321\",\n    \"email\": \"email@atualizado.com\",\n    \"tipo_cozinha\": \"Japonesa\",\n    \"descricao\": \"Um ótimo restaurante japonês.\",\n    \"created_at\": \"2024-04-29T20:56:10.000000Z\",\n    \"updated_at\": \"2024-05-20T18:20:32.000000Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/restaurantes/{restaurante}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|pElArNhKjZb6MxcMRfOEHMqmSU3zsKOWuTUEjg458610f64c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/restaurantes/19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"restaurantes",
+						"19"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/restaurantes/19",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/restaurantes/19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"restaurantes",
+								"19"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 18:17:52 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 18:17:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "/restaurantes/{restaurante)/avaliacoes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|pElArNhKjZb6MxcMRfOEHMqmSU3zsKOWuTUEjg458610f64c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/restaurantes/1/avaliacoes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"restaurantes",
+						"1",
+						"avaliacoes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/restaurantes/1/avaliacoes",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/restaurantes/1/avaliacoes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"restaurantes",
+								"1",
+								"avaliacoes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 Apr 2024 20:44:27 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 Apr 2024 20:44:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.10"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 5,\n        \"restaurante_id\": 1,\n        \"user_id\": 1,\n        \"avaliacao\": 5,\n        \"comentario\": \"Comida deliciosa e atendimento excelente!\",\n        \"created_at\": \"2024-04-29T17:35:20.000000Z\",\n        \"updated_at\": \"2024-04-29T17:35:20.000000Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/restaurantes/{restaurante}/avaliacoes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|pElArNhKjZb6MxcMRfOEHMqmSU3zsKOWuTUEjg458610f64c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"avaliacao\": 1,\r\n    \"comentario\": \"Achei péssimo!!\",\r\n    \"user_id\": \"5\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/restaurantes/1/avaliacoes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"restaurantes",
+						"1",
+						"avaliacoes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/restaurantes/1/avaliacoes",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"avaliacao\": 1,\r\n    \"comentario\": \"Achei péssimo!!\",\r\n    \"user_id\": \"5\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/restaurantes/1/avaliacoes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"restaurantes",
+								"1",
+								"avaliacoes"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 Apr 2024 20:52:32 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 Apr 2024 20:52:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.10"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"avaliacao\": 1,\n    \"comentario\": \"Achei péssimo!!\",\n    \"user_id\": \"5\",\n    \"restaurante_id\": 1,\n    \"updated_at\": \"2024-04-29T20:52:31.000000Z\",\n    \"created_at\": \"2024-04-29T20:52:31.000000Z\",\n    \"id\": 10,\n    \"restaurante\": {\n        \"id\": 1,\n        \"nome\": \"Cantinho Mineiro\",\n        \"endereco\": \"Rua das Minas, 123\",\n        \"cidade\": \"Belo Horizonte\",\n        \"cep\": \"30123-456\",\n        \"telefone\": \"(31) 98765-4321\",\n        \"email\": \"contato@cantinhomineiro.com\",\n        \"tipo_cozinha\": \"Mineira\",\n        \"descricao\": \"Restaurante especializado em comida mineira tradicional.\",\n        \"created_at\": \"2024-04-29T17:32:27.000000Z\",\n        \"updated_at\": \"2024-04-29T17:32:27.000000Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"usuario123@example.com\",\r\n    \"password\": \"senha123456\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "application/json",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nome do Usuário\",\r\n    \"email\": \"usuario@example.com\",\r\n    \"password\": \"senha123\",\r\n    \"password_confirmation\": \"senha123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|pElArNhKjZb6MxcMRfOEHMqmSU3zsKOWuTUEjg458610f64c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 18:25:34 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 May 2024 18:25:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 6,\n    \"name\": \"Nome do Usuário\",\n    \"email\": \"usuario@example.com\",\n    \"email_verified_at\": null,\n    \"created_at\": \"2024-05-20T14:21:02.000000Z\",\n    \"updated_at\": \"2024-05-20T14:21:02.000000Z\"\n}"
+				}
+			]
+		}
+	]
+}
