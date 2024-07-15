@@ -5,7 +5,7 @@ Este projeto é uma plataforma para avaliação e comentários de restaurantes. 
 
 ## Autor
 - Nome: Maria Eduarda Carvalho Lemos
-- Projeto construído para disciplica de Serviços Web
+- Projeto construído para disciplina de Serviços Web
 
 ## Requisitos
 - PHP 7.4 ou superior
