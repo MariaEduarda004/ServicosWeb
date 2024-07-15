@@ -31,7 +31,7 @@ Este projeto é uma plataforma para avaliação e comentários de restaurantes. 
    cp .env.example .env
    php artisan key:generate
 5. Configure as informações do banco de dados no arquivo .env.
-6. Execute as migrações:
+6. Execute as migrações para criação das tabelas no banco:
    ```sh
    php artisan migrate
 7. Inicie o servidor:
@@ -41,6 +41,10 @@ Este projeto é uma plataforma para avaliação e comentários de restaurantes. 
 ### Endpoints da API
 A documentação completa da API pode ser acessada através do Swagger, disponível na URL /api/documentation após iniciar o servidor.
 
+Passo a passo para realizar os testes na API:
+
+- POST /register: Cria um novo usuário.
+- POST /login: Permite que o usuário se logue no sistema, devolve uma hash deverá ser utilizada como autenticação nas chamadas dos demais recursos.
 - GET /restaurantes: Lista todos os restaurantes.
 - POST /restaurantes: Cria um novo restaurante.
 - GET /restaurantes/{id}: Obtém um restaurante específico pelo ID.
@@ -48,9 +52,9 @@ A documentação completa da API pode ser acessada através do Swagger, disponí
 - DELETE /restaurantes/{id}: Exclui um restaurante específico pelo ID.
 - GET /restaurantes/{id}/avaliacoes: Lista todas as avaliações de um restaurante específico.
 - POST /restaurantes/{id}/avaliacoes: Cria uma nova avaliação para um restaurante específico.
-- POST /login: Login de usuário.
-- POST /register: Cria um novo usuário.
 - GET /user: Busca dados de usuário por token.
+
+Também está disponibilizada a collection do Postman para testar as chamadas da API.
 
 
 
